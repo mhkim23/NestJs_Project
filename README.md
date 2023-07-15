@@ -45,6 +45,36 @@ $ nest new NestJs-Project
 
 ![image](https://github.com/mhkim23/NestJs_Project/assets/132381239/3305ef64-b89a-4bd5-a68c-f480611f1188)
 
+---
+
+소스코드로 실행하는 방법은 다음과 같다.
+
+```
+$ git clone https://github.com/dextto/book-nestjs-backend.git
+$ cd book-nestjs-backend/examples/ch1-intro/
+$ npm install  // 필요한 패키지를 설치합니다.
+$ npm run start
+```
+---
+
+개발 단계에서는 npm run start:dev 명령어를 이용하자. 소스코드 변경이 감지될때 자동으로 서버를 재 가동시켜주는 좋은 기능이다.
+
+```
+$ npm run start:dev
+```
+
+서버에 접속해 잘 작동하는지 확인하자. 포트는 기본값이 3000이다. 변경을 하고 싶다면 main.ts 파일에서 변경이 가능하다.
+
+![image](https://github.com/mhkim23/NestJs_Project/assets/132381239/5a777552-7748-48e8-9786-364fdd028737)
+
+```typescript
+//main.ts 파일 내 코드
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  await app.listen(3000); //3000번 기본 포트넘버
+}
+bootstrap();
+```
 
 # 2. docker DB(Postgresql) 설정
 
@@ -55,3 +85,8 @@ $ nest new NestJs-Project
 # 4. Github action을 통한 docker image 생성
 
 # 5. Google, Apple OAuth Login
+
+
+---
+### 참조링크
+1. [NestJs로 배우는 백엔드 프로그래밍](https://wikidocs.net/book/7059)
