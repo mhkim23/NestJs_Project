@@ -236,6 +236,14 @@ user_name 이라는 유저에게 권한을 주고 생성한다는 의미이다.
 
 데이터베이스와 유저 간 연결이 완료된 모습.
 
+---
+
+연결 해제는 ```\q```를 입력해주면 된다.
+### DB 삭제
+
+db 삭제하는 방법은 다음과 같다.
+
+
 ### Schema 지정
 
 ```
@@ -249,6 +257,7 @@ CREATE SCHEMA schema_name
 
 ![image](https://github.com/mhkim23/NestJs_Project/assets/132381239/e3908eb5-10f7-4ee8-b0e9-e610846de9b6)
 
+### 
 
 # 3. Rest API (User Register, Login처리), Swagger(https://swagger.io/)
 
