@@ -257,7 +257,36 @@ CREATE SCHEMA schema_name
 
 ![image](https://github.com/mhkim23/NestJs_Project/assets/132381239/e3908eb5-10f7-4ee8-b0e9-e610846de9b6)
 
-### 
+## 2.4 [typeorm](https://github.com/typeorm/typeorm)
+### 패키지 설치
+1. typeorm 패키지 설치
+```
+npm install typeorm --save
+```
+2. shim 설치
+```
+npm install reflect-metadata --save
+```
+3. 노드 입력 설치
+```
+npm install @types/node --save-dev
+```
+4. postgresql 드라이버 설치
+```
+npm install pg --save
+```
+5. 새 프로젝트 생성
+```
+npx typeorm init --name login_system --database postgres
+```
+login_system 이란 프로젝트가 생성되고, postgres db를 사용한다.
+
+디렉토리에 들어가면 ```/src/data-source.ts``` 파일을 볼 수 있다.
+
+```host``` , ```port``` , ```username``` , ```password``` , ```database``` 옵션을 설정에 맞게 변경한다.
+
+미리 생성했던 "user_id" database의 설정을 넣어주면 된다.
+
 
 # 3. Rest API (User Register, Login처리), Swagger(https://swagger.io/)
 
