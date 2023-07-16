@@ -1,18 +1,28 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 
 @Entity()
-export class User {
+export abstract class User {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn()  //자동으로 생성되는 primary key
     id: number
 
     @Column()
-    firstName: string
+    user_id: string
 
     @Column()
-    lastName: string
+    user_pw: number
+}
+
+@Entity()
+export class User_info extends User{
+    
+    @Column()
+    name:string
 
     @Column()
-    age: number
+    email:string
+
+    @Column()
+    phonenumber:number
 
 }
